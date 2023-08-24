@@ -1,6 +1,7 @@
 # app-acad-JS-prj
 
 Background
+
 This weather project is a solo endeavor focused on creating a straightforward weather webpage. The goal is to provide instant weather updates based on the user's location. The main display will offer essential information like current weather, temperature, and time of day. I'm also planning to incorporate a slider for easy switching between metric and imperial units.
 
 To go beyond the basics, I'm building interactive features that allow users to explore more detailed weather data. Clickable elements will reveal specific insights such as wind speed, precipitation, UV index, and air quality. While I'm considering adding language preferences, my main focus is on creating a clean and functional interface.
@@ -9,6 +10,7 @@ To go beyond the basics, I'm building interactive features that allow users to e
 
 
 Functionality & MVPs
+
 This weather project will include the following core features, a Minimum Viable Product (MVP), and an aspirational feature:
 
 Minimum Viable Product (MVP):
