@@ -1,9 +1,10 @@
-import Example from "./scripts/example";
+// import Example from "./scripts/example";
+import WeatherData from "./scripts/getWeatherData";
 
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("Hello World!");
-    //start my application
-
+document.addEventListener("DOMContentLoaded", async function() {
     const main = document.getElementById("main");
-    new Example(main);
+
+    const weather = new WeatherData();
+    const weatherData = await weather.checkWeather()
+    console.log(weatherData.main.temp)
 });
