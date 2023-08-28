@@ -42,6 +42,7 @@ class MountainBackground {
 
 
         this.ctx.beginPath();
+        this.ctx.lineWidth = 2;
         this.ctx.moveTo(-2400, 857);
         this.ctx.lineTo(755,this.canvas.height/1.6);
         this.ctx.strokeStyle = 'black'; // Set the line color
