@@ -165,8 +165,7 @@ class SunMoon {
         if (this.moon.x <= (5/10)*this.canvas.width) {
             this.ctx.arc(this.moon.x - 28 - (1/20 * this.moon.x), this.moon.y - (1/20 * this.moon.x), this.moon.wNot / (3), Math.PI * 2, 0, true);
         } else {
-            // this.ctx.arc(this.moon.x - 28 - (1/20 * this.moon.x), this.moon.y - (1/20 * this.moon.x), this.moon.wNot / (3), Math.PI * 2, 0, true);
-            this.ctx.arc(this.moon.x -24 - (1/20 * this.canvas.width/2) , this.moon.y - (1/20 * this.canvas.width/2), this.moon.wNot / (3), Math.PI * 2, 0, true);
+            this.ctx.arc(this.moon.x -26 - (1/20 * this.canvas.width/2), this.moon.y - (1/20 * this.canvas.width/2), this.moon.wNot / (3), Math.PI * 2, 0, true);
         }
         this.ctx.fillStyle = `rgb(0, ${this.sky.color1}, ${this.sky.color2})`;
         this.ctx.fill();
