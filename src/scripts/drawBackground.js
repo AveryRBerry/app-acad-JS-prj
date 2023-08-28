@@ -24,7 +24,7 @@ class MountainBackground {
         this.drawMountain(900, this.canvas.height/1.5, 800, 420, 'rgb(71, 135, 120)');
         this.drawMountain(500, this.canvas.height/1.5, 800, 200, 'rgb(71, 135, 120)');
 
-        this.drawMountain(-600, this.canvas.height/1.5, 1100, 250 , 'rgb(53, 94, 59)');
+        this.drawMountain(-600, this.canvas.height/1.5, 1100, 250 , 'rgb(53, 94, 59)');///////
         this.drawMountain(0, this.canvas.height/1.5, 900, 150, 'rgb(53, 94, 59)');
 
         this.drawMountain(1100, this.canvas.height/1.5, 1200, 400, 'rgb(2, 48, 32)');
@@ -36,8 +36,46 @@ class MountainBackground {
         const rectWidth = this.canvas.width;
         const rectHeight = this.canvas.height / 3;
 
-        this.ctx.fillStyle = "green";
+        this.ctx.fillStyle = "rgb(110, 184, 90)";
         this.ctx.fillRect(0, this.canvas.height - rectHeight, rectWidth, rectHeight);
+
+
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(-2400, 857);
+        this.ctx.lineTo(755,this.canvas.height/1.6);
+        this.ctx.strokeStyle = 'black'; // Set the line color
+        this.ctx.stroke();
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(-500, 857);
+        this.ctx.lineTo(755,this.canvas.height/1.6);
+        this.ctx.strokeStyle = 'black'; // Set the line color
+        this.ctx.stroke();
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(300, 857);
+        this.ctx.lineTo(755,this.canvas.height/1.6);
+        this.ctx.strokeStyle = 'black'; // Set the line color
+        this.ctx.stroke();
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(1100, 857);
+        this.ctx.lineTo(755,this.canvas.height/1.6);
+        this.ctx.strokeStyle = 'black'; // Set the line color
+        this.ctx.stroke();
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(2100, 857);
+        this.ctx.lineTo(755,this.canvas.height/1.6);
+        this.ctx.strokeStyle = 'black'; // Set the line color
+        this.ctx.stroke();
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(4000, 857);
+        this.ctx.lineTo(755,this.canvas.height/1.6);
+        this.ctx.strokeStyle = 'black'; // Set the line color
+        this.ctx.stroke();
     }
 
 }

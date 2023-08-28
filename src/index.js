@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     // const windSpeed = weatherData.wind.speed;
     // const weatherType = weatherData.weather[0].main;
 
-    const hours = 17; //temp for testing
+    const hours = 24; //temp for testing
 
     const newUpdater = new UpdateCanvas(hours);
 });
