@@ -10,7 +10,7 @@ class UpdateCanvas {
         this.background = new MountainBackground();
         this.newSunMoon = new SunMoon(this.hours, this.background);
         this.windSpeed = windSpeed;
-        this.newWindMill = new WindMill;
+        this.newWindMill = new WindMill(windSpeed);
 
         this.startDisplay();
     }
@@ -21,10 +21,7 @@ class UpdateCanvas {
 
     startDisplay = () => {
         this.clear();
-        // if (this.drawNewSunPos())this.drawNewMoonPos();
-        // if (this.hours >= 19 || this.hours < 6) this.drawNewMoonPos();
         if(this.drawNewSunPos() && (this.hours >= 19 || this.hours < 6)) this.drawNewMoonPos() 
-        // this.drawNewMoonPos();
         this.drawBackground();
         this.animateWindMills();
         requestAnimationFrame(this.startDisplay);

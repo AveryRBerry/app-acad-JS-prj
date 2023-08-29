@@ -35,7 +35,8 @@ class SunMoon {
     }
 
     drawSun = () => {
-
+        // this.ctx.shadowBlur = 10;
+        // this.ctx.shadowColor = "yellow";
         const gradient = this.ctx.createRadialGradient(
             this.sun.x, this.sun.y, 0, 
             this.sun.x, this.sun.y, this.sun.size 
@@ -47,6 +48,7 @@ class SunMoon {
         this.ctx.arc(this.sun.x, this.sun.y, this.sun.size, 0, Math.PI * 2);
         this.ctx.fillStyle = gradient
         this.ctx.fill();
+
     }
 
     updateSun = () => {

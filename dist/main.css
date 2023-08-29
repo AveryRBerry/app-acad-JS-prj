@@ -54,3 +54,104 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+#container {
+  display: block;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#startPage {
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  margin: 8% auto;
+  border: 2px solid rgb(128, 182, 155);
+}
+
+#explanation {
+  color: rgb(128, 182, 155);
+  font-size: 210%;
+  width: 70vh;
+}
+
+#Title {
+  color: rgb(128, 182, 155);
+  font-size: 700%;
+}
+
+#information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  color: rgb(128, 182, 155);
+}
+
+#utilities {
+  margin: auto;
+}
+
+#canvas {
+  border: 3px solid rgb(0, 0, 0);
+  display: block;
+  position: fixed;
+}
+
+button {
+  --b: 3px;
+  /* border thickness */
+  --s: .15em;
+  /* size of the corner */
+  --c: rgb(128, 182, 155);
+  padding: calc(0.05em + var(--s)) calc(0.3em + var(--s));
+  color: var(--c);
+  --_p: var(--s);
+  background: conic-gradient(from 90deg at var(--b) var(--b), rgba(0, 0, 0, 0) 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid rgba(0, 0, 0, 0);
+  outline-offset: 0.2em;
+}
+
+button:hover,
+button:focus-visible {
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: 0.05em;
+}
+
+button:active {
+  background: var(--c);
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  place-content: center;
+  background: #DAEDFB;
+}
+
+button {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  margin: 0.1em;
+}

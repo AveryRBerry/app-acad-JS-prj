@@ -1,4 +1,3 @@
-
 const newBlades = new Image();
 newBlades.src = 'src/windmill2.png';
 
@@ -14,19 +13,12 @@ class WindMill {
         }
     }
 
-    // clear = () => {
-    //     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    // }
-
     drawWindmill = () => {
         this.drawWindMillsBase(100, this.canvas.height-20);
         this.drawWindMillsBase(300, this.canvas.height-20 - 100, .7);
         this.drawWindMillsBase(500, this.canvas.height-20 - 200, .4);
         this.drawWindMillsBase(600, this.canvas.height-20 - 250, .2);
     }
-
-
-
 
     drawWindMillsBase = (xs, ys, sizer = 1) => {
         this.ctx.beginPath();
@@ -58,12 +50,10 @@ class WindMill {
         this.ctx.translate(xs + 50*sizer, ys - 300*sizer);
         this.ctx.rotate(this.windmill.angle * Math.PI/360)
         this.ctx.drawImage(newBlades, (0 - this.windmill.bladeSize/2)* sizer , (0 - this.windmill.bladeSize/2 -50)* sizer, this.windmill.bladeSize * sizer, this.windmill.bladeSize * sizer);
-        this.windmill.angle += 1;
+        this.windmill.angle += .1*this.windSpeed;
         this.ctx.restore();
 
     }
-
-
 }
 
 export default WindMill;
