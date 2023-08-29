@@ -98,6 +98,7 @@ table {
 
 ul {
   color: rgb(128, 182, 155);
+  font-size: 150%;
 }
 
 #utilities {
@@ -110,7 +111,7 @@ ul {
   position: fixed;
 }
 
-button {
+.Button {
   --b: 3px;
   /* border thickness */
   --s: .15em;
@@ -125,33 +126,66 @@ button {
   outline-offset: 0.2em;
 }
 
-button:hover,
-button:focus-visible {
+.Button:hover,
+.Button:focus-visible {
   --_p: 0px;
   outline-color: var(--c);
   outline-offset: 0.05em;
 }
 
-button:active {
+.Button:active {
   background: var(--c);
   color: #fff;
 }
 
-body {
-  height: 100vh;
-  margin: 0;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;
-  place-content: center;
-  background: #DAEDFB;
-}
-
-button {
+.Button {
   font-family: system-ui, sans-serif;
   font-weight: bold;
   font-size: 4rem;
   cursor: pointer;
   border: none;
   margin: 0.1em;
+}
+
+.search-field {
+  /* this class is for input field, if in your code its different, just substitute the class name '.search-field' */
+  padding: 10px 15px;
+  min-width: 55%;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: #373D41;
+  background-color: #FFF;
+  background-clip: padding-box;
+  border: 1px solid #C5C5C7;
+  border-radius: 6px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  flex-grow: 1;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-submit {
+  /* this class is for submit button, if in your code its different, just substitute the class name '.search-submit' */
+  background-color: rgba(128, 182, 155, 0.8);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: normal;
+  -webkit-transition: none;
+  transition: none;
+  cursor: pointer;
+  outline: 0;
+  padding: 14px 24px 13px;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  border-radius: 6px;
+  border-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search-form .input-group {
+  text-align: center;
 }

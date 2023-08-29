@@ -1,4 +1,4 @@
-button {
+.Button {
     --b: 3px;
     /* border thickness */
     --s: .15em;
@@ -15,29 +15,29 @@ button {
     outline-offset: .2em;
 }
 
-button:hover,
-button:focus-visible {
+.Button:hover,
+.Button:focus-visible {
     --_p: 0px;
     outline-color: var(--c);
     outline-offset: .05em;
 }
 
-button:active {
+.Button:active {
     background: var(--c);
     color: #fff;
 }
 
-body {
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
-    place-content: center;
-    background: #DAEDFB;
-}
+// body {
+//     height: 100vh;
+//     margin: 0;
+//     display: grid;
+//     grid-template-columns: auto auto;
+//     gap: 20px;
+//     place-content: center;
+//     background: #DAEDFB;
+// }
 
-button {
+.Button {
     font-family: system-ui, sans-serif;
     font-weight: bold;
     font-size: 4rem;
