@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // console.log(weatherData);
     const windSpeed = 11.5;
-    const hours = 24; //temp for testing
+    const hours = 1; //temp for testing
 
     const newUpdater = new UpdateCanvas(hours, windSpeed);
 });

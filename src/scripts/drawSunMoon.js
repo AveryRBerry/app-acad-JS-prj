@@ -50,35 +50,42 @@ class SunMoon {
     }
 
     updateSun = () => {
+
+        if (this.sun.x >= (12/10)*this.canvas.width ) {
+            this.drawSky();  
+            this.drawSun();
+            return true;
+        }
+
         if ((this.hours >= 0 && this.hours < 6) && this.sun.x < (12/10)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
                 if (this.sun.x < (5/10)*this.canvas.width) {
                     this.sun.size += .4;
-                    this.sky.color1 += .4
-                    this.sky.color2 += .4
+                    this.sky.color1 += .4;
+                    this.sky.color2 += .4;
                 } else {
                     this.sun.size -= .4;
-                    this.sky.color1 -= .6
-                    this.sky.color2 -= .6
+                    this.sky.color1 -= .6;
+                    this.sky.color2 -= .6;
                 }
         } 
         else if (this.hours >= 6 && this.sun.x < (1/70)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
                 this.sun.size += .25;
-                this.sky.color1 += .5
-                this.sky.color2 += .5
+                this.sky.color1 += .5;
+                this.sky.color2 += .5;
         } 
         else if (this.hours >= 8 && this.sun.x < (1/10)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
                 this.sun.size += .25;
-                this.sky.color1 += .5
-                this.sky.color2 += .5
+                this.sky.color1 += .5;
+                this.sky.color2 += .5;
         }
         else if (this.hours >= 11 && this.sun.x < (3/10)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
                 this.sun.size += .5;
-                this.sky.color1 += .5
-                this.sky.color2 += .5
+                this.sky.color1 += .5;
+                this.sky.color2 += .5;
         }
         else if (this.hours >= 13 && this.sun.x < (5/10)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
@@ -89,70 +96,99 @@ class SunMoon {
         else if (this.hours >= 15 && this.sun.x < (7/10)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
                 this.sun.size -= .5;
-                this.sky.color1 -= .5
-                this.sky.color2 -= .5
+                this.sky.color1 -= .5;
+                this.sky.color2 -= .5;
         }
         else if (this.hours >= 17 && this.sun.x < (9/10)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
                 this.sun.size -= .5;
-                this.sky.color1 -= .5
-                this.sky.color2 -= .5
+                this.sky.color1 -= .5;
+                this.sky.color2 -= .5;
         }
         else if (this.hours >= 19 && this.sun.x < (12/10)*this.canvas.width ) {
                 this.sun.x += this.sun.dx;
                 this.sun.size -= .25;
-                this.sky.color1 -= .5
-                this.sky.color2 -= .5
+                this.sky.color1 -= .5;
+                this.sky.color2 -= .5;
         } 
-        else { 
-            this.drawSky();
-            this.drawSun();
-            return false;
-        }
         this.drawSky();
         this.drawSun();
-        return true;
     }
 
     updateMoon = () => {
 
-        if (this.moon.x <= (5/10)*this.canvas.width) {
-            this.moon.w += 1;
-            this.moon.wNot += (1 + 1/6);
-        } else {
-            this.moon.w -= 1;
-            this.moon.wNot -= (1 + 1/6);
-        }
-
-
         if ((this.hours >= 19 && this.hours < 21) && this.moon.x < (1/10)*this.canvas.width ) {
-                this.moon.x += this.moon.dx;
+            this.moon.x += this.moon.dx;
+            if (this.moon.x <= (5/10)*this.canvas.width) {
+                this.moon.w += 1;
+                this.moon.wNot += (1 + 1/6);
+            } else {
+                this.moon.w -= 1;
+                this.moon.wNot -= (1 + 1/6);
+            }
         } 
         else if ((this.hours >= 21 && this.hours < 23)  && this.moon.x < (3/10)*this.canvas.width ) {
-                this.moon.x += this.moon.dx;
+            this.moon.x += this.moon.dx;
+            if (this.moon.x <= (5/10)*this.canvas.width) {
+                this.moon.w += 1;
+                this.moon.wNot += (1 + 1/6);
+            } else {
+                this.moon.w -= 1;
+                this.moon.wNot -= (1 + 1/6);
+            }
         } 
         else if ((this.hours >= 23 && this.hours <= 24)  && this.moon.x < (5/10)*this.canvas.width ) {
-                this.moon.x += this.moon.dx;
+            this.moon.x += this.moon.dx;
+            if (this.moon.x <= (5/10)*this.canvas.width) {
+                this.moon.w += 1;
+                this.moon.wNot += (1 + 1/6);
+            } else {
+                this.moon.w -= 1;
+                this.moon.wNot -= (1 + 1/6);
+            }
         } 
         else if ((this.hours >= 0 && this.hours < 2)  && this.moon.x < (7/10)*this.canvas.width ) {/////
-                this.moon.x += this.moon.dx;
+            this.moon.x += this.moon.dx;
+            if (this.moon.x <= (5/10)*this.canvas.width) {
+                this.moon.w += 1;
+                this.moon.wNot += (1 + 1/6);
+            } else {
+                this.moon.w -= 1;
+                this.moon.wNot -= (1 + 1/6);
+            }
         } 
         else if ((this.hours >= 2 && this.hours < 4)  && this.moon.x < (9/10)*this.canvas.width ) {
-                this.moon.x += this.moon.dx;
+            this.moon.x += this.moon.dx;
+            if (this.moon.x <= (5/10)*this.canvas.width) {
+                this.moon.w += 1;
+                this.moon.wNot += (1 + 1/6);
+            } else {
+                this.moon.w -= 1;
+                this.moon.wNot -= (1 + 1/6);
+            }
         } 
         else if ((this.hours >= 4 && this.hours < 6)  && this.moon.x < (10/10)*this.canvas.width ) {
-                this.moon.x += this.moon.dx;
+            this.moon.x += this.moon.dx;
+            if (this.moon.x <= (5/10)*this.canvas.width) {
+                this.moon.w += 1;
+                this.moon.wNot += (1 + 1/6);
+            } else {
+                this.moon.w -= 1;
+                this.moon.wNot -= (1 + 1/6);
+            }
         } 
-        else { 
-            this.drawSky();
-            // this.drawStars
-            this.drawMoon();
-            return false;
-        }
         this.drawSky();
         // this.drawStars
         this.drawMoon();
-        return true;
+
+        // fix growth of moon!!!!
+        // if (this.moon.x <= (5/10)*this.canvas.width) {
+        //     this.moon.w += 1;
+        //     this.moon.wNot += (1 + 1/6);
+        // } else {
+        //     this.moon.w -= 1;
+        //     this.moon.wNot -= (1 + 1/6);
+        // }
     }
     
     drawMoon = () => {

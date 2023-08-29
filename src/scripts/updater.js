@@ -21,21 +21,21 @@ class UpdateCanvas {
 
     startDisplay = () => {
         this.clear();
-        if (this.newSunMoon.updateSun()) {
-            requestAnimationFrame(this.startDisplay);
-        } else if (this.hours >=19 || this.hours < 6) {
-            this.drawNewMoonPos();
-        }
+        // if (this.drawNewSunPos())this.drawNewMoonPos();
+        // if (this.hours >= 19 || this.hours < 6) this.drawNewMoonPos();
+        if(this.drawNewSunPos() && (this.hours >= 19 || this.hours < 6)) this.drawNewMoonPos() 
+        // this.drawNewMoonPos();
         this.drawBackground();
         this.animateWindMills();
+        requestAnimationFrame(this.startDisplay);
+    }
 
+    drawNewSunPos = () => {
+        return this.newSunMoon.updateSun()
     }
 
     drawNewMoonPos = () => {
-        this.clear();
-        if (this.newSunMoon.updateMoon()) requestAnimationFrame(this.drawNewMoonPos)
-        this.drawBackground();
-        this.animateWindMills();
+        this.newSunMoon.updateMoon()
     }
 
     drawBackground = () => {
