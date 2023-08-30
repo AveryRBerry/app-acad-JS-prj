@@ -7,19 +7,16 @@
 #resetButton {
     position: fixed;
     bottom: 0;
-    right: 41%;
-    // color: var(rgb(20, 42, 131));
+    right: 40.5%;
     font-family: Didot;
 }
 
 #resetButton {
-    --b: 3px;
-    --s: .15em;
     --c: rgb(0, 0, 0);
-    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    padding: calc(.05em + .15em) calc(.3em + .15em);
     color: var(--c);
     background:
-        conic-gradient(from 90deg at var(--b) var(--b), #00000000 90deg);
+        conic-gradient(from 90deg at 3px 3px, #00000000 90deg);
     transition: .3s linear, color 0s, background-color 0s;
     background-color: rgba(0, 0, 0, 0.3);
 }   

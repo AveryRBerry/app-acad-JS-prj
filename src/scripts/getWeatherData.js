@@ -4,7 +4,6 @@ const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=imperial&
 const getWeather = async (cityName) => {
     const response = await fetch(`${API_URL}${cityName}&appid=${API_KEY}`);
     const weatherData = await response.json();
-    console.log(weatherData)
     return weatherData;
 }
 export default getWeather

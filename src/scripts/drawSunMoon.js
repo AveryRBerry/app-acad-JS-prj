@@ -35,8 +35,8 @@ class SunMoon {
     }
 
     drawSun = () => {
-        // this.ctx.shadowBlur = 10;
-        // this.ctx.shadowColor = "yellow";
+        this.ctx.shadowBlur = 40;
+        this.ctx.shadowColor = 'rgb(255, 205, 3)';
         const gradient = this.ctx.createRadialGradient(
             this.sun.x, this.sun.y, 0, 
             this.sun.x, this.sun.y, this.sun.size 
@@ -48,6 +48,7 @@ class SunMoon {
         this.ctx.arc(this.sun.x, this.sun.y, this.sun.size, 0, Math.PI * 2);
         this.ctx.fillStyle = gradient
         this.ctx.fill();
+        this.ctx.shadowBlur = 0;
 
     }
 
@@ -182,25 +183,13 @@ class SunMoon {
         this.drawSky();
         // this.drawStars
         this.drawMoon();
-
-        // fix growth of moon!!!!
-        // if (this.moon.x <= (5/10)*this.canvas.width) {
-        //     this.moon.w += 1;
-        //     this.moon.wNot += (1 + 1/6);
-        // } else {
-        //     this.moon.w -= 1;
-        //     this.moon.wNot -= (1 + 1/6);
-        // }
     }
     
     drawMoon = () => {
         this.ctx.beginPath();
-        // this.ctx.shadowBlur = 10;
-        // this.ctx.shadowColor = "yellow";
         this.ctx.arc(this.moon.x, this.moon.y, this.moon.w / 2, Math.PI * 2, 0, true);
         this.ctx.fillStyle = "white";
         this.ctx.fill();
-        // this.ctx.shadowBlur = 0;
 
         this.ctx.beginPath();
         if (this.moon.x <= (5/10)*this.canvas.width) {
@@ -214,7 +203,7 @@ class SunMoon {
     }
 
     drawStars = () => {
-    
+        const stars = [];
     }
 
 }

@@ -14,10 +14,10 @@ class WindMill {
     }
 
     drawWindmill = () => {
-        this.drawWindMillsBase(100, this.canvas.height-20);
-        this.drawWindMillsBase(300, this.canvas.height-20 - 100, .7);
+        this.drawWindMillsBase(0, this.canvas.height-20, 1.2);
+        this.drawWindMillsBase(275, this.canvas.height-20 - 100, .75);
         this.drawWindMillsBase(500, this.canvas.height-20 - 200, .4);
-        this.drawWindMillsBase(600, this.canvas.height-20 - 250, .2);
+        this.drawWindMillsBase(620, this.canvas.height-20 - 250, .2);
     }
 
     drawWindMillsBase = (xs, ys, sizer = 1) => {
