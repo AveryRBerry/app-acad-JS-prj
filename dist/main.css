@@ -101,7 +101,7 @@ table {
   align-items: center;
 }
 
-ul {
+#cover_page_ul {
   color: rgb(128, 182, 155);
   font-size: 150%;
 }
@@ -283,4 +283,20 @@ body {
 
 .footer-social-links a:hover:before {
   background: #ffffff;
+}
+
+#infoDisplay {
+  color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 1%;
+  right: 10%;
+  font-size: 200%;
+}
+
+#wind-value::before {
+  content: attr(value);
+}
+
+#time-of-day-value::before {
+  content: attr(value);
 }

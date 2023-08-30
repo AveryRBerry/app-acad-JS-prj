@@ -29,6 +29,12 @@ document.addEventListener("DOMContentLoaded", async function() {
         const windSpeed = weatherData.wind.speed;
         // const weatherType = weatherData.weather[0].main;
         const newUpdater = new UpdateCanvas(hours, windSpeed);
+
+
+        const windTextValue = document.getElementById('wind-value');
+        windTextValue.value = windSpeed
+        const timeOfDayButton = document.getElementById('time-of-day-value');
+        timeOfDayButton.value = hours
     })
 
     //Search typed city weather location
@@ -51,6 +57,11 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         container.style.display = 'none';
         searchInput.value = '';
+
+        const windTextValue = document.getElementById('wind-value');
+        windTextValue.value = windSpeed
+        const timeOfDayButton = document.getElementById('time-of-day-value');
+        timeOfDayButton.value = hours
     })
 
     resetButton.addEventListener('click', async function(event) {
