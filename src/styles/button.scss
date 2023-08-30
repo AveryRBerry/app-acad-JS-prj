@@ -1,23 +1,26 @@
 .Button {
     --c: rgb(128, 182, 155);
     padding: calc(.05em + .15em) calc(.3em + .15em);
-    color: rgb(128, 182, 155);
+    color: rgb(255, 255, 255);
     background:
         conic-gradient(from 90deg at 3px 3px, #00000000 90deg );
     transition: .3s linear, color 0s, background-color 0s;
     outline: 3px solid #0000;
-    background-color: rgba(128,182, 155, 0.3);
+    background-color: rgba(128,182, 155, 0.5);
+    outline-color: rgb(128, 182, 155);
+    outline-width: 2px;
 }
 
 .Button:hover,
 .Button:focus-visible {
     --_p: 0px;
+    outline-width: 5px;
     outline-color: var(--c);
     outline-offset: .05em;
 }
 
 .Button {
-    font-size: 4rem;
+    font-size: 1.7rem;
     cursor: pointer;
     border: none;
     margin: .1em;

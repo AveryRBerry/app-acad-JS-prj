@@ -1,6 +1,10 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
+  \*****************************************************************************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -109,22 +113,25 @@ ul {
 .Button {
   --c: rgb(128, 182, 155);
   padding: 0.2em 0.45em;
-  color: rgb(128, 182, 155);
+  color: rgb(255, 255, 255);
   background: conic-gradient(from 90deg at 3px 3px, rgba(0, 0, 0, 0) 90deg);
   transition: 0.3s linear, color 0s, background-color 0s;
   outline: 3px solid rgba(0, 0, 0, 0);
-  background-color: rgba(128, 182, 155, 0.3);
+  background-color: rgba(128, 182, 155, 0.5);
+  outline-color: rgb(128, 182, 155);
+  outline-width: 2px;
 }
 
 .Button:hover,
 .Button:focus-visible {
   --_p: 0px;
+  outline-width: 5px;
   outline-color: var(--c);
   outline-offset: 0.05em;
 }
 
 .Button {
-  font-size: 4rem;
+  font-size: 1.7rem;
   cursor: pointer;
   border: none;
   margin: 0.1em;
@@ -181,7 +188,7 @@ ul {
 #resetButton {
   position: fixed;
   bottom: 0;
-  right: 40.5%;
+  right: 45%;
   font-family: Didot;
 }
 
@@ -195,9 +202,68 @@ ul {
 }
 
 #resetButton {
-  font-size: 4rem;
+  font-size: 3rem;
   cursor: pointer;
   border: none;
   margin: 0.1em;
   border-radius: 10px;
+}
+
+body {
+  background-color: #eee;
+}
+
+.footer-social-links a {
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  position: relative;
+  margin: 0 5px;
+  text-align: center;
+  display: inline-block;
+  color: #111;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -ms-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.footer-social-links a i,
+.footer-social-links a span {
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+
+.footer-social-links a:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #111;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -ms-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.footer-social-links a:hover {
+  color: #fff;
+}
+
+.footer-social-links a:hover:before {
+  background: #111;
 }
