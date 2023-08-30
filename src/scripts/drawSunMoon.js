@@ -195,9 +195,12 @@ class SunMoon {
     
     drawMoon = () => {
         this.ctx.beginPath();
+        // this.ctx.shadowBlur = 10;
+        // this.ctx.shadowColor = "yellow";
         this.ctx.arc(this.moon.x, this.moon.y, this.moon.w / 2, Math.PI * 2, 0, true);
         this.ctx.fillStyle = "white";
         this.ctx.fill();
+        // this.ctx.shadowBlur = 0;
 
         this.ctx.beginPath();
         if (this.moon.x <= (5/10)*this.canvas.width) {

@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     const container = document.getElementById('container');
     const button = document.getElementById('demoButton');
 
+    //Search NY test button location weather
     button.addEventListener('click', async function(event) {
         event.preventDefault();
         container.style.display = 'none';
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const newUpdater = new UpdateCanvas(hours, windSpeed);
     })
 
-
+    //Search typed city weather location
     searchForm.addEventListener('click', async function(event) {
         event.preventDefault();
         const searchInput = document.getElementById('searchInput');
@@ -48,18 +49,13 @@ document.addEventListener("DOMContentLoaded", async function() {
         // const weatherType = weatherData.weather[0].main;
         const newUpdater = new UpdateCanvas(hours, windSpeed);
 
-        console.log(date.getUTCHours())
-        console.log("date.getUTCHours()")
-        console.log(utcShift)
-        console.log("utcShift")
-        console.log(hours)
-        console.log("hours")
-        console.log(weatherData.timezone)
-        console.log("weatherData.timezone")
-        // i need to mak an "if" date.getUTCHours() + utcShift > 
-
         container.style.display = 'none';
         searchInput.value = '';
+    })
+
+    resetButton.addEventListener('click', async function(event) {
+        event.preventDefault();
+        container.style.display = 'block';
     })
 
 });

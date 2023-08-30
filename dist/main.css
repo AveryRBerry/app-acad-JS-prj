@@ -106,12 +106,6 @@ ul {
   margin: auto;
 }
 
-#canvas {
-  border: 3px solid rgb(0, 0, 0);
-  display: block;
-  position: fixed;
-}
-
 .Button {
   --b: 3px;
   --s: .15em;
@@ -121,7 +115,7 @@ ul {
   background: conic-gradient(from 90deg at var(--b) var(--b), rgba(0, 0, 0, 0) 90deg);
   transition: 0.3s linear, color 0s, background-color 0s;
   outline: var(--b) solid rgba(0, 0, 0, 0);
-  background-color: rgba(128, 182, 155, 0.2);
+  background-color: rgba(128, 182, 155, 0.3);
 }
 
 .Button:hover,
@@ -178,4 +172,36 @@ ul {
 
 .search-form .input-group {
   text-align: left;
+}
+
+#canvas {
+  border: 3px solid rgb(0, 0, 0);
+  display: block;
+  position: fixed;
+}
+
+#resetButton {
+  position: fixed;
+  bottom: 0;
+  right: 41%;
+  font-family: Didot;
+}
+
+#resetButton {
+  --b: 3px;
+  --s: .15em;
+  --c: rgb(0, 0, 0);
+  padding: calc(0.05em + var(--s)) calc(0.3em + var(--s));
+  color: var(--c);
+  background: conic-gradient(from 90deg at var(--b) var(--b), rgba(0, 0, 0, 0) 90deg);
+  transition: 0.3s linear, color 0s, background-color 0s;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#resetButton {
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  margin: 0.1em;
+  border-radius: 10px;
 }
