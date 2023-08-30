@@ -143,10 +143,10 @@ table {
   min-width: 55%;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #373D41;
+  color: #413737;
   background-color: #FFF;
   background-clip: padding-box;
-  border: 1px solid #C5C5C7;
+  border: 1px solid #c5c7c6;
   border-radius: 6px;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -177,6 +177,14 @@ table {
 
 .search-form .input-group {
   text-align: left;
+}
+
+.search-field {
+  background-color: rgba(193, 208, 201, 0.8);
+}
+
+.search-field::placeholder {
+  color: rgb(0, 0, 0);
 }
 
 #canvas {
