@@ -4,21 +4,24 @@ body {
     background-color: #eee;
 }
 
-// .footer-social-links {
-//     font-size: 14px;
-//     text-align: center;
-//     margin-top: 20%;
-// }
+.footer-social-links {
+    font-size: 30px;
+    // text-align: center;
+    // margin-top: 20%;
+    padding-top: 10px;
+    padding-left: 5px;
+    z-index: 20;
+}
 
 .footer-social-links a {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     line-height: 25px !important;
     position: relative;
-    margin: 0 5px;
+    margin: 0 4px;
     text-align: center;
     display: inline-block;
-    color: #111;
+    color: #ffffff;
 
     -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
@@ -30,7 +33,7 @@ body {
 .footer-social-links a i,
 .footer-social-links a span {
     position: relative;
-    top: 2px;
+    top: 4px;
     left: 1px;
 }
 
@@ -42,7 +45,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    border: 1px solid #111;
+    border: 1px solid #ffffff;
 
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -63,9 +66,9 @@ body {
 }
 
 .footer-social-links a:hover {
-    color: #fff;
+    color: #000000;
 }
 
 .footer-social-links a:hover:before {
-    background: #111;
+    background: #ffffff;
 }

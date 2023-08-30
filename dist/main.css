@@ -69,7 +69,6 @@ table {
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: Didot;
 }
 
 #startPage {
@@ -93,6 +92,7 @@ table {
 #Title {
   color: rgb(128, 182, 155);
   font-size: 700%;
+  font-family: Didot;
 }
 
 #information {
@@ -189,7 +189,9 @@ ul {
   position: fixed;
   bottom: 0;
   right: 45%;
-  font-family: Didot;
+  font-family: Ubuntu;
+  outline-color: rgb(0, 0, 0);
+  outline-width: 3px;
 }
 
 #resetButton {
@@ -199,6 +201,14 @@ ul {
   background: conic-gradient(from 90deg at 3px 3px, rgba(0, 0, 0, 0) 90deg);
   transition: 0.3s linear, color 0s, background-color 0s;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+#resetButton:hover,
+#resetButton:focus-visible {
+  --_p: 0px;
+  outline-width: 5px;
+  outline-color: var(--c);
+  outline-offset: 0.05em;
 }
 
 #resetButton {
@@ -213,15 +223,22 @@ body {
   background-color: #eee;
 }
 
+.footer-social-links {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-left: 5px;
+  z-index: 20;
+}
+
 .footer-social-links a {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   line-height: 25px !important;
   position: relative;
-  margin: 0 5px;
+  margin: 0 4px;
   text-align: center;
   display: inline-block;
-  color: #111;
+  color: #ffffff;
   -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
@@ -232,7 +249,7 @@ body {
 .footer-social-links a i,
 .footer-social-links a span {
   position: relative;
-  top: 2px;
+  top: 4px;
   left: 1px;
 }
 
@@ -244,7 +261,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border: 1px solid #111;
+  border: 1px solid #ffffff;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -261,9 +278,9 @@ body {
 }
 
 .footer-social-links a:hover {
-  color: #fff;
+  color: #000000;
 }
 
 .footer-social-links a:hover:before {
-  background: #111;
+  background: #ffffff;
 }

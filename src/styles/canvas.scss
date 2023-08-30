@@ -8,7 +8,9 @@
     position: fixed;
     bottom: 0;
     right: 45%;
-    font-family: Didot;
+    font-family: Ubuntu;
+    outline-color: rgb(0, 0, 0);
+    outline-width: 3px;
 }
 
 #resetButton {
@@ -19,7 +21,16 @@
         conic-gradient(from 90deg at 3px 3px, #00000000 90deg);
     transition: .3s linear, color 0s, background-color 0s;
     background-color: rgba(0, 0, 0, 0.3);
-}   
+    
+}
+
+#resetButton:hover,
+#resetButton:focus-visible {
+    --_p: 0px;
+    outline-width: 5px;
+    outline-color: var(--c);
+    outline-offset: .05em;
+}
 
 #resetButton {
     font-size: 3rem;
@@ -27,4 +38,5 @@
     border: none;
     margin: .1em;
     border-radius: 10px;
+    
 }
