@@ -1,5 +1,4 @@
 .search-field {
-    /* this class is for input field, if in your code its different, just substitute the class name '.search-field' */
     padding: 10px 15px;
     min-width: 55%;
     font-size: 1rem;
@@ -18,8 +17,7 @@
 }
 
 .search-submit {
-    /* this class is for submit button, if in your code its different, just substitute the class name '.search-submit' */
-    background-color: rgba(128, 182, 155, .8);
+    background-color: rgba(128, 182, 155, .5);
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
@@ -38,5 +36,5 @@
 }
 
 .search-form .input-group {
-    text-align: center;
+    text-align: left;
 }

@@ -58,17 +58,18 @@ table {
 #container {
   display: block;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  font-family: Didot;
 }
 
 #startPage {
-  width: 70vw;
+  width: 80vw;
   height: 70vh;
   display: flex;
   flex-direction: row;
@@ -113,17 +114,14 @@ ul {
 
 .Button {
   --b: 3px;
-  /* border thickness */
   --s: .15em;
-  /* size of the corner */
   --c: rgb(128, 182, 155);
   padding: calc(0.05em + var(--s)) calc(0.3em + var(--s));
   color: var(--c);
-  --_p: var(--s);
-  background: conic-gradient(from 90deg at var(--b) var(--b), rgba(0, 0, 0, 0) 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+  background: conic-gradient(from 90deg at var(--b) var(--b), rgba(0, 0, 0, 0) 90deg);
   transition: 0.3s linear, color 0s, background-color 0s;
   outline: var(--b) solid rgba(0, 0, 0, 0);
-  outline-offset: 0.2em;
+  background-color: rgba(128, 182, 155, 0.2);
 }
 
 .Button:hover,
@@ -133,22 +131,15 @@ ul {
   outline-offset: 0.05em;
 }
 
-.Button:active {
-  background: var(--c);
-  color: #fff;
-}
-
 .Button {
-  font-family: system-ui, sans-serif;
-  font-weight: bold;
   font-size: 4rem;
   cursor: pointer;
   border: none;
   margin: 0.1em;
+  border-radius: 10px;
 }
 
 .search-field {
-  /* this class is for input field, if in your code its different, just substitute the class name '.search-field' */
   padding: 10px 15px;
   min-width: 55%;
   font-size: 1rem;
@@ -167,8 +158,7 @@ ul {
 }
 
 .search-submit {
-  /* this class is for submit button, if in your code its different, just substitute the class name '.search-submit' */
-  background-color: rgba(128, 182, 155, 0.8);
+  background-color: rgba(128, 182, 155, 0.5);
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
@@ -187,5 +177,5 @@ ul {
 }
 
 .search-form .input-group {
-  text-align: center;
+  text-align: left;
 }
